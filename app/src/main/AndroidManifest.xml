@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.Moody">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+        <activity android:name="com.example.Moody.Activity.IntroActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name="com.example.Moody.Activity.MainActivity"/>
+        <activity android:name="com.example.Moody.Activity.LoginActivity" />
+        <activity android:name="com.example.Moody.Sign.SignActivity"/>
+        <activity android:name="com.example.Moody.Sign.SignPwActivity"/>
+        <activity android:name="com.example.Moody.Sign.SignAddInfoActivity"/>
+        <activity android:name="com.example.Moody.Friend.AddFriendActivity"/>
+        <activity android:name="com.example.Moody.Chat.ChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.example.Moody.Chat.ChangeRoomName"/>
+        <activity android:name="com.example.Moody.Chat.UserSelectActivity"/>
+        <activity android:name="com.example.Moody.Feed.UploadPhotoActivity"/>
+        <activity android:name="com.example.Moody.Feed.DetailPopupActivity" android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name="com.example.Moody.Setting.app_info"/>
+        <activity android:name="com.example.Moody.Setting.ProfilePageActivity"/>
+        <activity android:name="com.example.Moody.Setting.QR_code"/>
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity android:name="com.example.Moody.Firebase.UpLoadImageToFirebase"/>
+        <activity android:name=".Friend.CaptureActivity"/>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+    </application>
+
+</manifest>

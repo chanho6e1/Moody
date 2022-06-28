@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundcorner"
+        android:elevation="50dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:outlineSpotShadowColor="@color/cardview_dark_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/friend_profile" />
+
+
+            <LinearLayout
+                android:layout_width="234dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#707070"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#707070"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/profile_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/setting" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/block_message_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="      메시지 차단 설정"
+            android:textAlignment="textStart" />
+
+        <Button
+            android:id="@+id/blocked_userlist_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="      차단 목록"
+            android:textAlignment="textStart" />
+
+        <Button
+            android:id="@+id/change_password_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="      비밀번호 변경"
+            android:textAlignment="textStart" />
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="      로그아웃"
+            android:textAlignment="textStart"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/app_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="      앱 정보"
+            android:textAlignment="textStart"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

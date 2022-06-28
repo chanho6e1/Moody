@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "986202047160",
+    "firebase_url": "https://graduation-project-ebb3e.firebaseio.com",
+    "project_id": "graduation-project-ebb3e",
+    "storage_bucket": "graduation-project-ebb3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986202047160:android:18100dd4c042432f8caa4d",
+        "android_client_info": {
+          "package_name": "com.example.Moody"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986202047160-9sfemgt1hho5arqt7e1tjjnt77no9llq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.Moody",
+            "certificate_hash": "6413975699e72a723a6a14cd5c7e9fba69a0e6b8"
+          }
+        },
+        {
+          "client_id": "986202047160-al26f2do9ke0cn34mumtsroot8qtplsn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnTKuM39G8mZKzaR0G36NwneDkcePw_3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986202047160-al26f2do9ke0cn34mumtsroot8qtplsn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

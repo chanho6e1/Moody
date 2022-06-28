@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:background="@drawable/roundcorner"
+        android:elevation="50dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <LinearLayout
+                android:layout_width="126dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/frined_btn"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button"
+                    android:layout_margin="7dp"
+                    android:layout_width="30.64dp"
+                    android:layout_height="30.64dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/friend_setting" />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="18.35dp"
+                    android:layout_height="16.11dp"
+                    android:layout_margin="12dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/frined_filiter" />
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_marginLeft="13dp"
+                    android:layout_width="3.68dp"
+                    android:layout_height="16.86dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/friend_dot" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/my_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/friend_profile" />
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/friend_chatBtn"
+                android:layout_width="56dp"
+                android:layout_height="23dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/friend_chat"
+                android:text="me"
+                android:textAllCaps="false"
+                android:textColor="#9F9F9F"
+                android:textSize="9dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/friend_search_bar"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/layout1">
+        <Space
+            android:layout_width="72dp"
+            android:layout_height="42dp"
+            android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="15.04dp"
+            android:layout_height="15.04dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/friend_search" />
+        <EditText
+            android:id="@+id/friend_search"
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:hint="Search name" />
+        <Space
+            android:layout_width="73dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friend_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/Layout2"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/friend_add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:backgroundTint="#BC96FA"
+        app:borderWidth="0dp"
+        android:src="@drawable/friend_plus"
+        app:backgroundTintMode="src_in"
+        app:fabSize="normal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

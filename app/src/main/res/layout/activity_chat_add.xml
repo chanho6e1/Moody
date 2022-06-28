@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/top1"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:background="@drawable/yj_top_border3"
+        android:elevation="50dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="414dp"
+        android:layout_height="120dp"
+        android:elevation="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/yj_profile_shadow"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/my_image"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:background="@drawable/yj_profile_border_white"
+                    android:padding="3dp"
+                    android:src="@drawable/profile" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/my_name"
+                android:layout_width="217dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/yj_btn1_border"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/chat_add_backBtn"
+                    android:layout_width="13.51dp"
+                    android:layout_height="13.11dp"
+                    android:background="@drawable/sign_back" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="206dp"
+        android:layout_marginHorizontal="9dp"
+        android:elevation="50dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="134dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/sel_ok_btn"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@drawable/yj_chat_border_2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="12dp"
+                    android:textColor="#919191"
+                    android:text="Create a new chat room" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="132dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="762dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="642dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/Layout2"
+                        android:layout_width="380dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/yj_search_border">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="15.04dp"
+                            android:layout_height="15.04dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="30dp"
+                            app:srcCompat="@drawable/yj_search" />
+
+                        <EditText
+                            android:id="@+id/chat_room_search"
+                            android:layout_width="284dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Search room"
+                            android:textSize="11dp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sel_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="691dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

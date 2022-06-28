@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <Chronometer
+        android:id="@+id/chrono2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/top1"
+        tools:ignore="MissingConstraints"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/yj_top_border3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        tools:ignore="MissingConstraints"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/chatRoom_backBtn"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:padding="9dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="39dp"
+            android:src="@drawable/yj_back_btn"
+            android:stateListAnimator="@null" />
+
+
+        <TextView
+            android:id="@+id/chatRoom_users"
+            tools:ignore="MissingConstraints"
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="49dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLength="120"
+            android:text="상대방 이름"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRoom_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="345dp"
+            android:layout_marginTop="140dp"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:background="@drawable/yj_chat_message_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/chatRoom_galleryBtn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/yj_photo_btn" />
+
+                <Button
+                    android:id="@+id/chatRoom_autoBtn"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/yj_smile_btn"
+                    android:stateListAnimator="@null" />
+
+                <EditText
+                    android:id="@+id/chatRoom_text"
+                    android:layout_width="231dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@null"
+                    android:hint="Type your message"
+                    android:textColor="#707070"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/yj_btn1_border"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/chatRoom_sendBtn"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:background="@drawable/yj_send_btn" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/late_msg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/late_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="예약된 메시지:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/late_msg_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="전송된 메시지"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tag_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

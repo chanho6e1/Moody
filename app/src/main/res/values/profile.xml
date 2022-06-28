@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name="profileMode">
+            <item>전체 공개</item>
+            <item>친한 친구만 공개</item>
+        </string-array>
+</resources>

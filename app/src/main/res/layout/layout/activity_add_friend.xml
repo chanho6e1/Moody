@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/Layout1"
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:background="@drawable/roundcorner"
+        android:elevation="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:outlineSpotShadowColor="@color/cardview_dark_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/friend_add_backBtn"
+            android:layout_width="14.15dp"
+            android:layout_height="10.85dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:background="@drawable/chat_back"
+            android:stateListAnimator="@null" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Add by e-mail"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#707070"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/friend_search_btn"
+            android:layout_width="2dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/friend_plus" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/friend_search_bar"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Layout1">
+
+        <Space
+            android:layout_width="72dp"
+            android:layout_height="42dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/friend_add_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Please enter your friend's e-mail"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

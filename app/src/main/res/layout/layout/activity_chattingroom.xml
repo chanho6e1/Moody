@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundcorner"
+        android:elevation="50dp"
+        android:gravity="center_vertical"
+        android:outlineSpotShadowColor="@color/cardview_dark_background">
+
+        <Button
+            android:id="@+id/chatRoom_backBtn"
+            android:layout_width="14.15dp"
+            android:layout_height="10.85dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="15dp"
+            android:background="@drawable/chat_back"
+            android:stateListAnimator="@null" />
+
+        <Space
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/chatRoom_users"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="상대방 이름"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/chatRoom_calendarBtn"
+            android:layout_width="71dp"
+            android:layout_height="35dp"
+            android:background="@drawable/chat_search"
+            android:layout_margin="15dp"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRoom_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/chat_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/chatRoom_galleryBtn"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/chat_camera" />
+
+        <LinearLayout
+            android:layout_width="361dp"
+            android:layout_height="43.7dp"
+            android:background="@drawable/chat_message_bar"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/chatRoom_autoBtn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/smile"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:stateListAnimator="@null" />
+
+            <EditText
+                android:id="@+id/chatRoom_text"
+                android:layout_width="276dp"
+                android:layout_height="40dp"
+                android:hint="Type your massage"
+                android:textColor="#707070"
+                android:background="@null"/>
+
+            <Button
+                android:id="@+id/chatRoom_sendBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/chat_send" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
