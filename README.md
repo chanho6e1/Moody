@@ -13,3 +13,14 @@
 
 ## About
 - 
+
+## UI/UX
+
+## Tool
+- Android Studio
+- Firebase
+- Java
+- Python
+- TensorFlow
+
+## Main Algorithm
